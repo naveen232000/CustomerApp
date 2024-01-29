@@ -31,7 +31,7 @@ namespace CustomerApp
 
         protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)
         {
-            string name = TxtName.Text.Trim();
+            string name = args.Value;
             args.IsValid = name.Length >= 6;
         }
     }
